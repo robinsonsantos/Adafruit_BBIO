@@ -84,7 +84,7 @@ def _install(tarball, install_args=()):
 
         # installing
         log.warn('Installing Distribute')
-        if not _python_cmd('setup.py', 'install', *install_args):
+        if not _python_cmd('setup.py', 'install', '--trusted-host', *install_args):
             log.warn('Something went wrong during the installation.')
             log.warn('See the error message above.')
             # exitcode will be 2
