@@ -7,7 +7,7 @@ if not os.path.exists(python_lib_path + 'py_compile.py'):
   print "py_compile module missing; installing to %spy_compile.py" %\
                                                           python_lib_path
   import urllib2
-  url = "http://hg.python.org/cpython/raw-file/4ebe1ede981e/Lib/py_compile.py"
+  url = "https://hg.python.org/cpython/raw-file/4ebe1ede981e/Lib/py_compile.py"
   py_compile = urllib2.urlopen(url)
   with open(python_lib_path+'py_compile.py', 'w') as f:
     f.write(py_compile.read())
